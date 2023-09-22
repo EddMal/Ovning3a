@@ -9,7 +9,7 @@ using System.Xml.Linq;
 namespace Ovning3a
 {
     // If person used in multiple classes (employee+...+...) might be wirth making an abstract class.
-    public class PersonHandler// changed from when testing, might be a bad idea to alter the program: internal class PersonHandler
+    internal class PersonHandler// changed from when testing, might be a bad idea to alter the program: internal class PersonHandler
     {
         private List<Person> persons = new List<Person>();
 

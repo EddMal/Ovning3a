@@ -43,7 +43,11 @@ namespace Ovning3Test
             //-- Arrange
             var personActual = new Person(3, "Mliks", "Mysing", 5, 4);
 
-            // Changed the acess modyfier for PersonHandler to public, feels lika a bad approach to alter the code, other way to go about it?
+            // Changed the acess modyfier for this test for PersonHandler to public, to get acess to PersonHandler content,
+            // feels lika a bad approach to alter the code, other way to go about it?
+            // Approach 2, added class personhandler and person as links to project solved the issue, new issue = conflict warnings,
+            // probebly because of the double references. 
+            //
             var PHandler = new PersonHandler();
             PHandler.SetAge(personActual, 37);
 
@@ -79,8 +83,8 @@ namespace Ovning3Test
             //-- Arrange
             var PH = new PersonHandler();
             var person1 = new Person(3, "Mliks", "Mysing", 5, 4);
-            var person2 = new Person(3, "Klick", "Mysing", 5, 4);
-            var person3 = new Person(3, "Slick", "Mysing", 5, 4);
+            var person2 = new Person(3, "Klicks", "Mysing", 5, 4);
+            var person3 = new Person(3, "Slicks", "Mysing", 5, 4);
 
             PH.AddPersonToRegister(person1);
             PH.AddPersonToRegister(person2);
@@ -92,12 +96,12 @@ namespace Ovning3Test
 
             //-- Act
             var person1Expected = "Mliks";
-            var person2Expected = "Kliks";
-            var person3Expected = "Sliks";
+            var person2Expected = "Klicks";
+            var person3Expected = "Slicks";
             //-- Assert
-            Assert.AreEqual(person1Expected, personRegisterActual[1]);
-            Assert.AreEqual(person2Expected, personRegisterActual[2]);
-            Assert.AreEqual(person3Expected, personRegisterActual[3]);
+            Assert.AreEqual(person1Expected, personRegisterActual[0].Fname);
+            Assert.AreEqual(person2Expected, personRegisterActual[1].Fname);
+            Assert.AreEqual(person3Expected, personRegisterActual[2].Fname);
 
         }
 
