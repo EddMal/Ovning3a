@@ -15,6 +15,7 @@ namespace Ovning3a
         private string? lName;
         private double height;
         private double weight;
+        
 
         // Public properties:
 
@@ -70,8 +71,6 @@ namespace Ovning3a
 
             }
         }
-
-        //---?? FURTHER INSTRUCTIONS for PROPERTIES WEIGHT, HEIGHT??
         public double Height
         {
             get 
@@ -119,6 +118,7 @@ namespace Ovning3a
             Lname = lname;
             Height = height;
             Weight = weight;
+            
         }
 
 

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 //3.2 Polymorfism
-namespace Ovning3a
+namespace Ovning3a.ErrorMessages
 {
     abstract class UserError
     {

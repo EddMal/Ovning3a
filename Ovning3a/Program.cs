@@ -1,5 +1,7 @@
 ﻿
+using System;
 using System.Diagnostics;
+using Ovning3a.ErrorMessages;
 
 namespace Ovning3a
 {
@@ -19,7 +21,9 @@ namespace Ovning3a
                 }
                 catch (Exception exceptionMessage)
                 {
-                    Debug.WriteLine($"{exceptionMessage}");
+                    //Debug window, do not se the message?.
+                    //Debug.WriteLine(exceptionMessage);
+                    Console.WriteLine(exceptionMessage);
                     initiationFailed = true;
                     break;
                 }
@@ -45,7 +49,9 @@ namespace Ovning3a
             //Evaluate this executes the same thing as "var person = new Person(3, "Mliks", "Mysing", 5, 4);"
             //Might be an idea to replace ad to register inside create person, or rather halt the use of new person.
             var NewPerson = PHandler.CreatePerson(30, "Dinkel", "Mysing", 7, 10);
-            PHandler.SetAge(person, 0);
+
+            
+            PHandler.SetAge(person, 22);
             Console.WriteLine(person.Age);
 
             //3.2 Polymorfism
@@ -77,9 +83,18 @@ namespace Ovning3a
             {
                 Console.WriteLine(error);
             }
-            // End 3.2 Polymorfism.
+            //-- End 3.2 Polymorfism.
 
-            
+            // Inheritance 3.3:
+            var horse = new Horse(45,"Choppy",17,true);
+            horse.Domesticated = true;
+            var HorseSound = horse.DoSound();
+            Console.WriteLine(horse.Domesticated);
+            Console.WriteLine(HorseSound);
+
+
+
+
         }
     }
 }
