@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 // Inheritance 3.3
-namespace Ovning3a
+namespace Ovning3a.Animals
 {
     abstract class Animal
     {
@@ -13,9 +13,47 @@ namespace Ovning3a
         protected double weight;
         protected string name;
         protected int age;
-        public bool SpecialProperty = false;
+        protected string specialProperty;
+        protected string specialPropertySubBirds;
 
         // Properties in abstract is this best practise?
+
+        public string SpecialPropertySubBirds
+        {
+            get
+            {
+                return specialPropertySubBirds;
+            }
+            set
+            {
+                if (value.Length < 3 || value.Length > 30)
+                {
+                    throw new ArgumentException($"Error caused by parameter-value, name = \"{value}\" is out of the range of 3-30 characters");
+                }
+
+                specialPropertySubBirds = value;
+
+            }
+        }
+
+        public string SpecialProperty
+        {
+            get
+            {
+                return specialProperty;
+            }
+            set
+            {
+                if (value.Length < 3 || value.Length > 30)
+                {
+                    throw new ArgumentException($"Error caused by parameter-value, name = \"{value}\" is out of the range of 3-30 characters");
+                }
+
+                specialProperty = value;
+
+            }
+        }
+
         public int Age
         {
             get
@@ -33,7 +71,7 @@ namespace Ovning3a
             }
         }
 
-        public String Name
+        public string Name
         {
             get
             {

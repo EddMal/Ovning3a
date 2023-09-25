@@ -2,6 +2,7 @@
 using System;
 using System.Diagnostics;
 using Ovning3a.ErrorMessages;
+using Ovning3a.Animals;
 
 namespace Ovning3a
 {
@@ -56,7 +57,8 @@ namespace Ovning3a
 
             //3.2 Polymorfism
             // This should be cleaned up by dividing code in to methoods:
-            List<string> UserErrors = new List<string>();
+           
+            /*List<string> UserErrors = new List<string>();
 
             var UEText = new TextInputError();
             var UENumeric = new NumericInputError();
@@ -82,17 +84,25 @@ namespace Ovning3a
             foreach (var error in UserErrors)
             {
                 Console.WriteLine(error);
-            }
+            }*/
             //-- End 3.2 Polymorfism.
 
             // Inheritance 3.3:
-            var horse = new Horse(45,"Choppy",17,true);
-            horse.Domesticated = true;
-            var HorseSound = horse.DoSound();
-            Console.WriteLine(horse.Domesticated);
-            Console.WriteLine(HorseSound);
+            var horse = new Horse(45,"Choppy",17);
+            var horseSpecial = horse.AnimalsSpecialProperty();
+            var horseSound = horse.DoSound();
+            Console.WriteLine(horseSound);
+            Console.WriteLine(horseSpecial);
 
+            //Flamingo
+            var flamingo = new Birds.Flamingo(10, "Krinko", 3);
+            var flamingoSpecial = flamingo.AnimalsSpecialProperty();
+            var flamingoSpecial2 = flamingo.AnimalsSecondSpecialProperty();
+            var flamingoSound = flamingo.DoSound();
 
+            Console.WriteLine(flamingoSound);
+            Console.WriteLine(flamingoSpecial);
+            Console.WriteLine(flamingoSpecial2);
 
 
         }
