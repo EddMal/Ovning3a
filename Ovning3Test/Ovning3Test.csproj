@@ -10,7 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="..\Ovning3a\Person.cs" Link="Person.cs" />
+    <Compile Include="..\Ovning3a\PersonGroup\Person.cs" Link="Person.cs" />
     <Compile Include="..\Ovning3a\PersonHandler.cs" Link="PersonHandler.cs" />
   </ItemGroup>
 

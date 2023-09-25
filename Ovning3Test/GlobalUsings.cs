@@ -1,2 +1,3 @@
 global using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Ovning3a.Animals;
+global using Ovning3a;
+
