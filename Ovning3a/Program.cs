@@ -3,7 +3,7 @@ using System;
 using System.Diagnostics;
 using Ovning3a.ErrorMessages;
 using Ovning3a.Animals;
-using Ovning3a.Person;
+using Ovning3a.PersonGroup;
 
 namespace Ovning3a
 {

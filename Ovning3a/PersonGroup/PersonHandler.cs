@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace Ovning3a
+namespace Ovning3a.PersonGroup
 {
     // If person used in multiple classes (employee+...+...) might be wirth making an abstract class.
     internal class PersonHandler// changed from when testing, might be a bad idea to alter the program: internal class PersonHandler
@@ -18,13 +18,13 @@ namespace Ovning3a
             var person = new Person(age, fname, lname, height, weight);
 
             return person;
-        
+
         }
 
         //EVALUATE!!
-        
+
         //Might need further control--------------------------------
-        public List<Person> GetPersonRegister() 
+        public List<Person> GetPersonRegister()
         {
             List<Person> RetrievePersons = persons;
             return RetrievePersons;

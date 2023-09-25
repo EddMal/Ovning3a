@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace Ovning3a
+namespace Ovning3a.PersonGroup
 {
     public class Person
     {
@@ -15,7 +15,7 @@ namespace Ovning3a
         private string? lName;
         private double height;
         private double weight;
-        
+
 
         // Public properties:
 
@@ -36,7 +36,7 @@ namespace Ovning3a
             }
         }
 
-        public String Fname
+        public string Fname
         {
             get
             {
@@ -47,14 +47,14 @@ namespace Ovning3a
                 if (value.Length < 2)
                 {
                     throw new ArgumentException($"Error caused by parameter-value, fname = \"{value}\", fname must be at least 2 characters");
-                    
+
                 }
 
                 fName = value;
             }
-        } 
-               
-        public String Lname
+        }
+
+        public string Lname
         {
             get
             {
@@ -73,7 +73,7 @@ namespace Ovning3a
         }
         public double Height
         {
-            get 
+            get
             {
                 return height;
             }
@@ -110,15 +110,15 @@ namespace Ovning3a
 
             if (fname is null || lname is null)
             {
-               throw new NullReferenceException("Error caused by parameter-value for lname and/or fname: Parameters lname and fname cannot be null.");
+                throw new NullReferenceException("Error caused by parameter-value for lname and/or fname: Parameters lname and fname cannot be null.");
             }
-            
+
             Age = age;
             Fname = fname;
             Lname = lname;
             Height = height;
             Weight = weight;
-            
+
         }
 
 
