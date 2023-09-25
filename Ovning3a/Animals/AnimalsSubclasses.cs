@@ -27,6 +27,7 @@ namespace Ovning3a.Animals
         }
         public override string Stats()
         {
+            //The use of SpecialProperty does not work, fix.
             string stats = $"Animals statistics:Age:{Age}, Name:{Name}, Weight:{Weight}, SpecialProperty:{SpecialProperty}";
             return stats;
         }
