@@ -154,10 +154,10 @@ namespace Ovning3a
 
                 Console.WriteLine(sounds);
 
-                //if (animal = IPerson)
+                //if (animal is IPerson)
                 //{
-                //Cast...missed out , due to time.
-                //    var sounds = animal.Talk();
+                //    IPersonCast = (IPerson)animal;
+                //        var sounds = animal.Talk();
                 //    Console.WriteLine(sounds);
                 //}
             }
