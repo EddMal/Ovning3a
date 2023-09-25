@@ -107,17 +107,13 @@ namespace Ovning3a.Animals
 
         public abstract string DoSound();
 
+        public virtual string Stats()
+        {
+            string stats = $"Animals statistics:Age:{Age}, Name{Name}, Weight:{Weight}"; 
+            return stats;
+        }
 
 
-        // Constructor, how to manage?
 
-        //public Animal(double weight, string name, int age)
-        //{
-        //    Age = age;
-        //    Name = name;
-        //    Weight = weight;
-        //}
-
-
-    }
+}
 }

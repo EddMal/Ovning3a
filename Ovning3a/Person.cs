@@ -106,7 +106,7 @@ namespace Ovning3a
         // The constructor blocks any attempt to create a person without parameters with acceopted values. Constructor with null check:
         public Person(int age, string fname, string lname, double height, double weight)
         {
-            //add List
+            //Move list from PersonHandler to Constructor?
 
             if (fname is null || lname is null)
             {

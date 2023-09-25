@@ -8,7 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="NewFolder\" />
+    <Folder Include="Person\" />
+	  <Folder Include="ErrorMessages\" />
+	  <Folder Include="Animals\" />
   </ItemGroup>
 
 </Project>

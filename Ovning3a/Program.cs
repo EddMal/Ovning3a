@@ -3,11 +3,21 @@ using System;
 using System.Diagnostics;
 using Ovning3a.ErrorMessages;
 using Ovning3a.Animals;
+using Ovning3a.Person;
 
 namespace Ovning3a
 {
     internal class Program
     {
+        // Svar frågor:
+        // F.1:
+        // I klassen Animals om devisen #placera så lågt som möjligt". Det skullle eventuellt vara tänkbart
+        // att placera attributet i klassen Birds då det är specefikt för fågelns subklasser.
+
+        //F.2:
+        // I klassen Animals´.
+
+
         static void Main(string[] args)
         {
             bool initiationFailed = false;
@@ -36,12 +46,10 @@ namespace Ovning3a
         private static void ExecuteProgram()
         {
             //Considder ways to halt unwanted acess of constructor and properties:
-            var person = new Person(3, "Mliks", "Mysing", 5, 4);
-
-            
-            person.Age = 10;
-            person.Fname = "Korke";
-            var getAge = person.Age;
+            var person = new Person(3, "Mliks", "Mysing", 5, 4);   
+           // person.Age = 10;
+            //person.Fname = "Korke";
+            //var getAge = person.Age;
             // End unwanted use of constructor and properties.
 
 
@@ -105,6 +113,37 @@ namespace Ovning3a
             Console.WriteLine(flamingoSpecial2);
 
 
-        }
+            //Wolfman
+            //var wolfPerson = new Ovning3a.Person.Wolfman(45, "Stimmy", 17);
+            //var wolfPersonSpecialP = wolfPerson.AnimalsSpecialProperty();
+            //var wolfPersonSays = wolfPerson.Talk();
+            //var wolfPersonSounds = wolfPerson.DoSound();
+
+            //Console.WriteLine(wolfPersonSounds);
+            //Console.WriteLine(wolfPersonSays);
+            //Console.WriteLine(wolfPersonSounds);
+
+            //Animals 3.4:
+            List<Animal> Animals = new List<Animal>();
+
+            Animals.Add(horse);
+
+            var hedgehog = new HedgeHog(45, "gerd", 17);
+            Animals.Add(hedgehog);
+
+            var swan = new Birds.Swan(45, "Swanis", 17);
+            Animals.Add(swan);
+
+
+
+            foreach (var animal in Animals)
+            { 
+            
+            }
+
+
+
+
+    }
     }
 }

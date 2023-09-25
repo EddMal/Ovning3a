@@ -25,8 +25,15 @@ namespace Ovning3a.Animals
             SpecialProperty = "NA";
             return SpecialProperty;
         }
+        public override string Stats()
+        {
+            string stats = $"Animals statistics:Age:{Age}, Name{Name}, Weight:{Weight}, SpecialProperty:{SpecialProperty}";
+            return stats;
+        }
 
     }
+
+    // Classes should be divided in to separate files.
     internal class Horse : AnimalsSubclass
     {
         public Horse(double weight, string name, int age) : base(weight, name, age)
