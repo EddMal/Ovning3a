@@ -25,7 +25,7 @@ namespace Ovning3a.PersonGroup
 
         public string Talk()
         {
-            return @"{Name}: Pardon me!";
+            return $"{Name}: Pardon me!";
         }
     }
 }

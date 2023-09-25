@@ -120,17 +120,20 @@ namespace Ovning3a
 
 
             //Wolfman
-            //var wolfPerson = new Ovning3a.Person.Wolfman(45, "Stimmy", 17);
-            //var wolfPersonSpecialP = wolfPerson.AnimalsSpecialProperty();
-            //var wolfPersonSays = wolfPerson.Talk();
-            //var wolfPersonSounds = wolfPerson.DoSound();
+            var wolfPerson = new Wolfman(45, "Stimmy", 17);
+            var wolfPersonSpecialP = wolfPerson.AnimalsSpecialProperty();
+            var wolfPersonSays = wolfPerson.Talk();
+            var wolfPersonSounds = wolfPerson.DoSound();
 
-            //Console.WriteLine(wolfPersonSounds);
-            //Console.WriteLine(wolfPersonSays);
-            //Console.WriteLine(wolfPersonSounds);
+            Console.WriteLine(wolfPersonSpecialP);
+            Console.WriteLine(wolfPersonSounds);
+            Console.WriteLine(wolfPersonSays);
+            Console.WriteLine(wolfPersonSounds);
 
             //Animals 3.4:
             List<AnimalsSubclass> Animals = new List<AnimalsSubclass>();
+            
+            Animals.Add(wolfPerson);
 
             Animals.Add(horse);
 
@@ -143,23 +146,22 @@ namespace Ovning3a
             var aDog = new Dog(45, "Doggie", 17);
             Animals.Add(aDog);
 
-            //Animals.Add(wolfperson);
 
 
 
             foreach (var animal in Animals)
             { 
-                Console.WriteLine(animal);
+                Console.WriteLine($"{animal}");
                 var sounds = animal.DoSound();
 
                 Console.WriteLine(sounds);
 
-                //if (animal is IPerson)
-                //{
-                //    IPersonCast = (IPerson)animal;
-                //        var sounds = animal.Talk();
-                //    Console.WriteLine(sounds);
-                //}
+                if (animal is IPerson)
+                {
+                    var IPersonCast = (IPerson)animal;
+                    var Wolfmansounds = IPersonCast.Talk();
+                    Console.WriteLine(Wolfmansounds);
+                }
             }
 
             //Dogs:
@@ -176,18 +178,15 @@ namespace Ovning3a
                 //Error
                 if (animal is Dog)
                 {
-                    var Dogstats = animal.Stats();
-                    Console.WriteLine(Dogstats);
                     var Doggie = (Dog)animal;
+                    var Dogstats = Doggie.Stats();
+                    Console.WriteLine($"{Dogstats}");
                     var dogreturn2 = Doggie.DogReturns();
-                    Console.WriteLine(dogreturn2);
+                    Console.WriteLine($"{dogreturn2}");
                 }
 
 
             }
-
-            var dogreturn = aDog.DogReturns();
-            Console.WriteLine(dogreturn);
 
         }
     }

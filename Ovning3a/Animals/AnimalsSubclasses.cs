@@ -27,7 +27,7 @@ namespace Ovning3a.Animals
         }
         public override string Stats()
         {
-            string stats = $"Animals statistics:Age:{Age}, Name{Name}, Weight:{Weight}, SpecialProperty:{SpecialProperty}";
+            string stats = $"Animals statistics:Age:{Age}, Name:{Name}, Weight:{Weight}, SpecialProperty:{SpecialProperty}";
             return stats;
         }
 
@@ -67,7 +67,7 @@ namespace Ovning3a.Animals
 
         public override string AnimalsSpecialProperty()
         {
-            SpecialProperty = "Barks really loud";
+            SpecialProperty = $"Barks really loud";
             return SpecialProperty;
         }
 
