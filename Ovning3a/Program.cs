@@ -17,6 +17,12 @@ namespace Ovning3a
         //F.2:
         // I klassen Animals´.
 
+        //F.3
+        // Går ej att lägga till för att det är fel typ.
+
+        //F.4
+        //Definitionen saknas i animals.
+
 
         static void Main(string[] args)
         {
@@ -124,7 +130,7 @@ namespace Ovning3a
             //Console.WriteLine(wolfPersonSounds);
 
             //Animals 3.4:
-            List<Animal> Animals = new List<Animal>();
+            List<AnimalsSubclass> Animals = new List<AnimalsSubclass>();
 
             Animals.Add(horse);
 
@@ -134,16 +140,55 @@ namespace Ovning3a
             var swan = new Birds.Swan(45, "Swanis", 17);
             Animals.Add(swan);
 
+            var aDog = new Dog(45, "Doggie", 17);
+            Animals.Add(aDog);
+
+            //Animals.Add(wolfperson);
+
 
 
             foreach (var animal in Animals)
             { 
-            
+                Console.WriteLine(animal);
+                var sounds = animal.DoSound();
+
+                Console.WriteLine(sounds);
+
+                //if (animal = IPerson)
+                //{
+                //Cast...missed out , due to time.
+                //    var sounds = animal.Talk();
+                //    Console.WriteLine(sounds);
+                //}
             }
 
+            //Dogs:
+            List<Dog> DogList = new List<Dog>();
+            //Dogs.Add(horse);
+
+            foreach (var animal in Animals)
+            {
+                Console.WriteLine(animal);
+                var sounds = animal.DoSound();
+
+                Console.WriteLine(sounds);
+
+                //Error
+                if (animal is Dog)
+                {
+                    var Dogstats = animal.Stats();
+                    Console.WriteLine(Dogstats);
+                    var Doggie = (Dog)animal;
+                    var dogreturn2 = Doggie.DogReturns();
+                    Console.WriteLine(dogreturn2);
+                }
 
 
+            }
 
-    }
+            var dogreturn = aDog.DogReturns();
+            Console.WriteLine(dogreturn);
+
+        }
     }
 }

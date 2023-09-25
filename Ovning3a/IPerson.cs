@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Ovning3a.Person
 {
-    internal interface IPerson
-    {
-        string Talk();
-    }
+    //internal interface IPerson
+    //{
+    //    string Talk();
+    //}
 }

@@ -75,6 +75,11 @@ namespace Ovning3a.Animals
         {
             return $"Woff!";
         }
+
+        public string DogReturns()
+        {
+            return $"{Name} returns a bone.";
+        }
     }
 
     internal class HedgeHog : AnimalsSubclass
